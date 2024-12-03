@@ -1,0 +1,98 @@
+render-in-progress: <red> <world> wird bereits gerendert
+render-not-in-progress: <red>Es wird nichts für <world> gerendert
+cancelled-render: <green>Render für <world> abgebrochen
+successfully-reset-map: <green>Karte für <world> erfolgreich abgebrochen
+paused-renders: <green>Rendern für <world> pausiert
+unpaused-renders: <green>Render für <world> wird fortgesetzt
+command:
+    message:
+        console-must-specify-player: <red>Es muss ein spieler ausgewählt werden wenn der
+         Befehl von der Console ausgeführt wird
+        player-not-found-for-input: <red>Es wurde kein spieler gefunden für '<input>'
+        console-must-specify-world: <red>Es muss eine Welt ausgewählt werden wenn dieser
+        Befehl von der Konsole ausgeführt wird
+        no-such-world: <red>Diese Welt ist nicht bekannt '<world>'
+        map-not-enabled-for-world: <red>Karte ist nicht für die Welt '<world>' aktiviert
+        confirmation-required: <red>Bestätigung benötigt. Bestätige mit /<command>
+            confirm.
+        no-pending-commands: <red>Es gibt keine unerledigten Befehle.
+        progresslogging:
+            enabled: <green>Render Fortschritt logs wurden Aktiviert.
+            disabled: <green>Render Fortschritt logs wurden Deaktiviert.
+            set-rate: <green>Render Fortschritt logs Intervall wurde zu </green><seconds>
+                Sekunden geändert
+            statusmessage: 'Render Fortschritt logs Aktiviert: <enabled>, Intervall:
+                <green><seconds></green> Sekunden'
+    prefix: '<white>[<gradient:#C028FF:#5B00FF>squaremap</gradient>]</white> '
+    description:
+        help: Hilfe für squaremap Befehle
+        resetmap: Setzt die karte für eine Ausgewählte Welt zurück
+        confirm: Bestätige einen wartenden Befehl
+        reload: Lädt das Plugin neu
+        full-render: Rendert die Gesammte ausgewählte Welt
+        cancel-render: Bricht einen Render vorgang für die Ausgewählte Welt ab
+        pause-render: Pausiert alle Render vorgänge für die Ausgewählte welt ab
+        radius-render: Rendert eine ausgewählten Radius
+        progresslogging:
+            status: Zeigt die momentanen Einstellungen für die Render logs an
+            toggle: Schaltet die ausgabe der Render logs aus oder ein
+            rate: Setzt denn Intervall für die Render logs
+        hide: Versteckt einen Spieler von der Kartenansicht
+        show: Zeigt einen Spieler auf der Kartenansicht an
+    argument:
+        optional-world: Verwendet standardmäßig die Welt in welcher der Spieler sich befindet
+         auswählen solange keine andere ausgewählt wird
+        optional-center: Verwendet standardmäßig (<white>0<gray>,</gray> 0</white>) 
+        wenn keine andere ausgewählt wird
+        optional-player: Verwendet standardmäßig denn Ausführenden Spieler wenn keiner
+         ausgewählt wird (Konsole muss einen Spieler auswählen)
+        help-query: Hilfe Warteschlange
+    hide:
+        already-hidden: <red><player> ist bereits von der kartenansicht versteckt
+        hidden: <green><player> ist jetzt von der Kartenansicht versteckt
+    show:
+        not-hidden: <red><player> ist nicht von der Kartenansicht versteckt
+        shown: <green><player> ist nicht mehr von der Kartenansicht versteckt
+click-for-help: Für hilfe klicken
+click-to-confirm: Zum bestätigen klicken
+click-to-toggle: Zum Wechseln klicken
+plugin-reloaded: <green><name> v<version> neugeladen
+ui:
+    page-title: squaremap - {world}
+    coordinates: Koordinaten <br/>{x}, {z}
+    sidebar:
+        player-list: Spieler ({cur}/{max})
+        world-list: Welten
+    layers:
+        player-tracker: Spieler
+        world-spawn: Spawn
+        world-border: Weltgrenze
+log:
+    started-full-render: <world> wird komplett gerendert
+    started-radius-render: <world> wird mit einem Radius gerendert
+    scanning-region-files: Suche nach region dateien... (Dies kann etwas dauern)
+    found-total-region-files: Es wurden <total> region dateien gefunden
+    finished-rendering: <world> wurde fertig gerendert
+    cancelled-rendering: Der Render vorgang für <world> wurde unterbrochen
+    resumed-rendering: Der Render vorgang für <world> wird fortgesetzt
+    scanning-region-progress: '(<percent>) Welt: <world> Chunks: <current_chunks>/<total_chunks>
+        Vergangen: <elapsed> ETA: <eta> Rate: <rate> cps'
+    scanning-region-progress-with-regions: '(<percent>) Welt: <world> Regionen: <current_regions>/<total_regions>
+        Chunks: <current_chunks>/<total_chunks> Vergangen: <elapsed> ETA: <eta> Rate:
+        <rate> cps'
+    internal-web-disabled: Interner Webserver wurde in der Konfiguration deaktiviert (config.yml)
+    internal-web-started: Interner Webserver lauscht auf <bind>:<port>
+    internal-web-stopped: Interner Webserver gestopt
+    internal-web-start-error: Interner Webserver konnte nicht starten
+    could-not-create-directory: Konnte denn Ordner <path> nicht erstellen
+    could-not-read-region: Konnte nicht das map image für die Region <x>,<z> lesen (bild beschädigt?).
+        Bild wird überschrieben
+    could-not-save-region: Konnte die Karte für region <x>,<z> nicht speichern
+    internal-web-not-running: Es ist ein Fehler auf dem Internen Webserver aufgetreten
+    update-checker:
+        fetching-version-information: Lädt versions informationen...
+        behind-branch: squaremap ist <behind> versionen hinter branch '<branch>'!
+        download-dev-builds: Lade dev builds von hier herunter <link> 
+        unknown-commit: Unbekannter commit '<commit>', kann nicht nach Updates überprüfen.
+        behind-releases: squaremap ist <behind> versionen veraltet.
+        download-release: Lade dir die neuste Version (<latest>) hier herunter <link>
