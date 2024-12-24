@@ -1,11 +1,11 @@
 plugins {
   id("squaremap.base-conventions")
-  id("org.spongepowered.gradle.vanilla")
+  id("net.neoforged.moddev")
 }
 
-minecraft {
-  version().set(libs.versions.minecraft)
-  accessWideners(layout.projectDirectory.file("src/main/resources/squaremap-common.accesswidener"))
+neoForge {
+  neoFormVersion = libs.versions.neoform
+  accessTransformers.from(layout.projectDirectory.file("src/main/resources/squaremap-common-at.cfg"))
 }
 
 dependencies {
@@ -46,5 +46,5 @@ dependencies {
     isTransitive = false // depends on guava, provided by mc at runtime
   }
 
-  compileOnly("curse.maven:moonrise-1096335:5842523")
+  compileOnly("curse.maven:moonrise-1096335:6008360")
 }
